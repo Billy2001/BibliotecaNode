@@ -31,5 +31,6 @@ api.delete('/eliminarRevista/:UserId',md_auth.ensureAuth,RevistaController.elimi
 api.get('/obtenerRevistas/:UserId',md_auth.ensureAuth,RevistaController.obtenerRevista);
 
 /*Usuario Normal*/
-api.put('/prestarLibro',md_auth.ensureAuth,UserNormal.PrestarLibro);
+api.post('/prestarLibro',md_auth.ensureAuth,UserNormal.PrestarLibro);
+api.post('/prestarRevista',md_auth.ensureAuth,UserNormal.PrestarRevista);
 module.exports = api;
